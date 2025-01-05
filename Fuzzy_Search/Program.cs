@@ -5,8 +5,6 @@ internal class Program
 {
     private static void Main()
     {
-        Console.WriteLine("Hello, World!");
-
         var _dbContext = new ApplicationDbContext();
 
         #region adding
@@ -14,19 +12,19 @@ internal class Program
         //    new Post()
         //    {
         //        Title = "Sardor",
-        //        Body = "This is the first post",
+        //        Body = "Soxinazarov",
         //        CreatedAt = DateTime.Now
         //    },
         //    new Post()
         //    {
         //        Title = "Sarvar",
-        //        Body = "This is the second post",
+        //        Body = "Sohinazarov",
         //        CreatedAt = DateTime.Now
         //    },
         //    new Post()
         //    {
         //        Title = "Sanjar",
-        //        Body = "This is the third post",
+        //        Body = "Sohibnazarov",
         //        CreatedAt = DateTime.Now
         //    }
         //);
@@ -39,10 +37,11 @@ internal class Program
         var searchTerm = Console.ReadLine();
 
         var result = _dbContext.Posts
-                             .Where(p => ApplicationDbContext.Soundex(p.Title) == ApplicationDbContext.Soundex(searchTerm)) // SOUNDEX qidiruvi
+                             .Where(p => ApplicationDbContext.Soundex(p.Title) == ApplicationDbContext.Soundex(searchTerm)
+                                      || ApplicationDbContext.Soundex(p.Body) == ApplicationDbContext.Soundex(searchTerm)) // SOUNDEX qidiruvi
                              .ToList();
 
-        Console.WriteLine($"Natija: {JsonSerializer.Serialize(result)}");
+        Console.WriteLine($"Natija: {JsonSerializer.Serialize(result, options: new JsonSerializerOptions() { WriteIndented = true })}");
 
         Main();
         #endregion
