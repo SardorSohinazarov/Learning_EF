@@ -16,9 +16,16 @@ var db = new ApplicationDb();
 //});
 //db.SaveChanges();
 var options = new JsonSerializerOptions { WriteIndented = true };
-Console.WriteLine("Teachers:" + JsonSerializer.Serialize(db.Teachers.ToList(), options));
-Console.WriteLine("Students:" + JsonSerializer.Serialize(db.Students.ToList(), options));
+
+// Barcha foydalanuvchilarni(talabalar va o'qituvchilarni) olish
 Console.WriteLine("Users:" + JsonSerializer.Serialize(db.Users.ToList(), options));
+
+// Faqat talabalarni olish
+Console.WriteLine("Teachers 1-usul:" + JsonSerializer.Serialize(db.Teachers.ToList(), options));
+Console.WriteLine("Teachers 2-usul:" + JsonSerializer.Serialize(db.Users.OfType<Teacher>().ToList(), options));
+
+Console.WriteLine("Students 1-usul:" + JsonSerializer.Serialize(db.Students.ToList(), options));
+Console.WriteLine("Students 2-usul:" + JsonSerializer.Serialize(db.Users.OfType<Student>(), options));
 #endregion
 
 #region Db
