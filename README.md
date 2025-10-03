@@ -48,7 +48,7 @@ Yuqoridagi konfiguratsiya orqali quyidagi jadvallar hosil bo‘ladi:
 
 ---
 
-## 🔹 Kod namunasi
+## [🔹 Kod namunasi](https://github.com/SardorSohinazarov/Learning_EF/blob/master/Mapping_Strategy_TPT/Program.cs)
 
 ### Entitylar:
 ```csharp
