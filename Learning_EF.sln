@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temporal_Tables", "Temporal_Tables\Temporal_Tables.csproj", "{EF5F5D1B-91AD-439C-BAAC-BA194605AAC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuzzy_Search", "Fuzzy_Search\Fuzzy_Search.csproj", "{399BBA76-C237-4FD0-9152-F67F4FB2D3EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapping_Strategy_TPT", "Mapping_Strategy_TPT\Mapping_Strategy_TPT.csproj", "{91CFD829-9828-4B4B-8DBA-487EDF70BEEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{399BBA76-C237-4FD0-9152-F67F4FB2D3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{399BBA76-C237-4FD0-9152-F67F4FB2D3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{399BBA76-C237-4FD0-9152-F67F4FB2D3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CFD829-9828-4B4B-8DBA-487EDF70BEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CFD829-9828-4B4B-8DBA-487EDF70BEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CFD829-9828-4B4B-8DBA-487EDF70BEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CFD829-9828-4B4B-8DBA-487EDF70BEEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E784A948-F669-4E76-A88D-D23559C2F2A8}
 	EndGlobalSection
 EndGlobal
